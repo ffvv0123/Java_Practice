@@ -1,0 +1,9 @@
+Continue - break
+
+continue: 반복을 빠져나가지 않고, 바로 다음 반복으로 넘어가는 키워드
+-> 실행 경로 변경
+
+for문 -> continue를 만나면 아래 작업문을 실행하지 않고 반복 후 작업문으로 바로 넘어감
+while, do-while -> continue를 만나면 아래 작업문을 실행하지 않고 조건식으로 넘어감
+
+break: 반복문 탈출 키워

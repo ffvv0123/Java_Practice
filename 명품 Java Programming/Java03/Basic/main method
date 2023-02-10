@@ -1,0 +1,49 @@
+main() 메소드
+-> 자바 응용프로그램의 실행이 시작되는 메소드
+
+public static void main(String[] args)
+
+public: 다른 클래스에서 메소드 접근 허용
+static: 객체 생성 전부터 호출 가능
+void: 리턴 값 없음
+String[]: 문자열 배열
+args: 매개변수
+
+- 자바 응용프로그램의 실행은 main() 메스드부터 시작
+
+- main() 메소드는 public
+-> 다른 클래스에서 호출 가능 -> 자바 가상 기계(Java Virtual Machine, JVM)에 의해 호출 <- public
+
+- main() 메소드는 static
+-> 자신을 포함하는 클래스의 객체가 생성되기 전, JVM에 의해 호출 -> static
+
+- main() 리턴형 void
+-> 아무값도 리턴하지 않는다. 굳이 return을 쓰려면 return;을 사용하자
+
+- main() 메소드에는 문자열 배열이 매개변수로 전달
+-> 명령행에 입력된 인자들을 문자열 배열로 만들어서 main() 메소드에 전달
+
+- main() 메소드의 매개변수
+C:\> java Jello option1 option2 ... optionN 	// Hello 클래스를 실행하는 명
+-> 각 옵션을 명령행 인자(Command Line Argument) 라고 부른다. -> Hello 클래스의 main() 메소드의 매개변수
+
+public Static void main(String[] args) {
+	String a = args[0]; // abc
+	String b = args[1]; // 3
+	String c = args[2]; // 5.7
+}
+
+
+Ex) C:\>java Hello abc 3 5.7
+args.length = 3
+args[0] = "abc"
+args[1] = "3"
+args[2] = "5.7"
+
+-> In eclipse
+
+Run - Run Configurations
+
+Program arguments
+abc 3 5.7
+
