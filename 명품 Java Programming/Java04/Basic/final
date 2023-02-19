@@ -1,0 +1,28 @@
+final 키워드
+- 클래스, 메소드, 필드에서 사용 
+
+final 클래스: 클래스를 상속받을 수 없음
+
+final class FinalClass {} // 상속 불가
+class SubClass extends FinalClass	// compile error, cannot inherit final class
+
+final 메소드: 오버라이딩 할 수 없는 메소드
+-> 자식 클래스가 부모 클래스의 특정 메소드를 오버라이딩 못하고 상속을 통해서 사용하도록 하는 경우
+
+public class SuperClass {
+	protected final int finalMethod() {...}
+}
+
+class SubClass extends SuperClass {
+	protected int finalMethod() {...} // compile error, cannot override final method
+}
+
+final 필드: 필드를 final로 선언하면 상수
+final int ROWS = 10;	// 상수 선언, 초기값 10, 바꾸려고 하면 컴파일에러
+
+class SharedClass {
+	public static final double PI = 3.14;
+}
+
+double area = PI * radius * radius;
+double area = SharedClass.PI * radius * radius;
